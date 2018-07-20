@@ -7,8 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EA20B2C210112C0000A9BE2 /* CardValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B2B210112C0000A9BE2 /* CardValidatorViewController.swift */; };
+		4EA20B2D210112C0000A9BE2 /* CardValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B2B210112C0000A9BE2 /* CardValidatorViewController.swift */; };
+		4EA20B2E210112C0000A9BE2 /* CardValidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B2B210112C0000A9BE2 /* CardValidatorViewController.swift */; };
+		4EA20B3021011338000A9BE2 /* RomanConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B2F21011338000A9BE2 /* RomanConverterViewController.swift */; };
+		4EA20B3121011338000A9BE2 /* RomanConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B2F21011338000A9BE2 /* RomanConverterViewController.swift */; };
+		4EA20B3221011338000A9BE2 /* RomanConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B2F21011338000A9BE2 /* RomanConverterViewController.swift */; };
+		4EA20B34210113AF000A9BE2 /* CardValidatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B33210113AF000A9BE2 /* CardValidatorView.swift */; };
+		4EA20B35210113AF000A9BE2 /* CardValidatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B33210113AF000A9BE2 /* CardValidatorView.swift */; };
+		4EA20B36210113AF000A9BE2 /* CardValidatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B33210113AF000A9BE2 /* CardValidatorView.swift */; };
+		4EA20B38210113C8000A9BE2 /* RomanConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B37210113C8000A9BE2 /* RomanConverterView.swift */; };
+		4EA20B39210113C8000A9BE2 /* RomanConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B37210113C8000A9BE2 /* RomanConverterView.swift */; };
+		4EA20B3A210113C8000A9BE2 /* RomanConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B37210113C8000A9BE2 /* RomanConverterView.swift */; };
+		4EA20B3C21011406000A9BE2 /* LuhnAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B3B21011406000A9BE2 /* LuhnAlgorithm.swift */; };
+		4EA20B3D21011406000A9BE2 /* LuhnAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B3B21011406000A9BE2 /* LuhnAlgorithm.swift */; };
+		4EA20B3E21011406000A9BE2 /* LuhnAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B3B21011406000A9BE2 /* LuhnAlgorithm.swift */; };
+		4EA20B40210115A2000A9BE2 /* RomanConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B3F210115A2000A9BE2 /* RomanConvert.swift */; };
+		4EA20B41210115A2000A9BE2 /* RomanConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B3F210115A2000A9BE2 /* RomanConvert.swift */; };
+		4EA20B42210115A2000A9BE2 /* RomanConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B3F210115A2000A9BE2 /* RomanConvert.swift */; };
+		4EA20B4421011D62000A9BE2 /* RomanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4321011D62000A9BE2 /* RomanManager.swift */; };
+		4EA20B4521011D62000A9BE2 /* RomanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4321011D62000A9BE2 /* RomanManager.swift */; };
+		4EA20B4621011D62000A9BE2 /* RomanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4321011D62000A9BE2 /* RomanManager.swift */; };
+		4EA20B4821011D86000A9BE2 /* CardValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */; };
+		4EA20B4921011D86000A9BE2 /* CardValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */; };
+		4EA20B4A21011D86000A9BE2 /* CardValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */; };
+		67557DFA2101FE5D00583BA7 /* GlobalStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67557DF92101FE5D00583BA7 /* GlobalStrings.swift */; };
 		67C74C552101042400AF494E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C74C542101042400AF494E /* AppDelegate.swift */; };
-		67C74C572101042400AF494E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C74C562101042400AF494E /* ViewController.swift */; };
 		67C74C5A2101042400AF494E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C74C582101042400AF494E /* Main.storyboard */; };
 		67C74C5C2101042400AF494E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C74C5B2101042400AF494E /* Assets.xcassets */; };
 		67C74C5F2101042400AF494E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C74C5D2101042400AF494E /* LaunchScreen.storyboard */; };
@@ -34,9 +58,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EA20B2B210112C0000A9BE2 /* CardValidatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidatorViewController.swift; sourceTree = "<group>"; };
+		4EA20B2F21011338000A9BE2 /* RomanConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanConverterViewController.swift; sourceTree = "<group>"; };
+		4EA20B33210113AF000A9BE2 /* CardValidatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidatorView.swift; sourceTree = "<group>"; };
+		4EA20B37210113C8000A9BE2 /* RomanConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanConverterView.swift; sourceTree = "<group>"; };
+		4EA20B3B21011406000A9BE2 /* LuhnAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuhnAlgorithm.swift; sourceTree = "<group>"; };
+		4EA20B3F210115A2000A9BE2 /* RomanConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanConvert.swift; sourceTree = "<group>"; };
+		4EA20B4321011D62000A9BE2 /* RomanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanManager.swift; sourceTree = "<group>"; };
+		4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidateManager.swift; sourceTree = "<group>"; };
+		67557DF92101FE5D00583BA7 /* GlobalStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalStrings.swift; sourceTree = "<group>"; };
 		67C74C512101042400AF494E /* SwiftLogica1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLogica1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C74C542101042400AF494E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		67C74C562101042400AF494E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		67C74C592101042400AF494E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67C74C5B2101042400AF494E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67C74C5E2101042400AF494E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +106,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EA20B2421010D8B000A9BE2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				4EA20B2821010DE6000A9BE2 /* Business */,
+				4EA20B2721010DCD000A9BE2 /* Manager */,
+				4EA20B2621010DC2000A9BE2 /* View */,
+				4EA20B2521010D99000A9BE2 /* Controller */,
+				67557DF92101FE5D00583BA7 /* GlobalStrings.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		4EA20B2521010D99000A9BE2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4EA20B2B210112C0000A9BE2 /* CardValidatorViewController.swift */,
+				4EA20B2F21011338000A9BE2 /* RomanConverterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4EA20B2621010DC2000A9BE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EA20B33210113AF000A9BE2 /* CardValidatorView.swift */,
+				4EA20B37210113C8000A9BE2 /* RomanConverterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EA20B2721010DCD000A9BE2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4EA20B4321011D62000A9BE2 /* RomanManager.swift */,
+				4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4EA20B2821010DE6000A9BE2 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				4EA20B3B21011406000A9BE2 /* LuhnAlgorithm.swift */,
+				4EA20B3F210115A2000A9BE2 /* RomanConvert.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
 		67C74C482101042300AF494E = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +177,8 @@
 		67C74C532101042400AF494E /* SwiftLogica1 */ = {
 			isa = PBXGroup;
 			children = (
+				4EA20B2421010D8B000A9BE2 /* Source */,
 				67C74C542101042400AF494E /* AppDelegate.swift */,
-				67C74C562101042400AF494E /* ViewController.swift */,
 				67C74C582101042400AF494E /* Main.storyboard */,
 				67C74C5B2101042400AF494E /* Assets.xcassets */,
 				67C74C5D2101042400AF494E /* LaunchScreen.storyboard */,
@@ -188,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Paulo César Morandi Massuci";
 				TargetAttributes = {
 					67C74C502101042400AF494E = {
@@ -259,8 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C74C572101042400AF494E /* ViewController.swift in Sources */,
+				4EA20B40210115A2000A9BE2 /* RomanConvert.swift in Sources */,
 				67C74C552101042400AF494E /* AppDelegate.swift in Sources */,
+				4EA20B34210113AF000A9BE2 /* CardValidatorView.swift in Sources */,
+				4EA20B3C21011406000A9BE2 /* LuhnAlgorithm.swift in Sources */,
+				4EA20B4821011D86000A9BE2 /* CardValidateManager.swift in Sources */,
+				67557DFA2101FE5D00583BA7 /* GlobalStrings.swift in Sources */,
+				4EA20B2C210112C0000A9BE2 /* CardValidatorViewController.swift in Sources */,
+				4EA20B4421011D62000A9BE2 /* RomanManager.swift in Sources */,
+				4EA20B3021011338000A9BE2 /* RomanConverterViewController.swift in Sources */,
+				4EA20B38210113C8000A9BE2 /* RomanConverterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA20B41210115A2000A9BE2 /* RomanConvert.swift in Sources */,
 				67C74C6A2101042400AF494E /* SwiftLogica1Tests.swift in Sources */,
+				4EA20B35210113AF000A9BE2 /* CardValidatorView.swift in Sources */,
+				4EA20B3D21011406000A9BE2 /* LuhnAlgorithm.swift in Sources */,
+				4EA20B4921011D86000A9BE2 /* CardValidateManager.swift in Sources */,
+				4EA20B2D210112C0000A9BE2 /* CardValidatorViewController.swift in Sources */,
+				4EA20B4521011D62000A9BE2 /* RomanManager.swift in Sources */,
+				4EA20B3121011338000A9BE2 /* RomanConverterViewController.swift in Sources */,
+				4EA20B39210113C8000A9BE2 /* RomanConverterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +372,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA20B42210115A2000A9BE2 /* RomanConvert.swift in Sources */,
 				67C74C752101042400AF494E /* SwiftLogica1UITests.swift in Sources */,
+				4EA20B36210113AF000A9BE2 /* CardValidatorView.swift in Sources */,
+				4EA20B3E21011406000A9BE2 /* LuhnAlgorithm.swift in Sources */,
+				4EA20B4A21011D86000A9BE2 /* CardValidateManager.swift in Sources */,
+				4EA20B2E210112C0000A9BE2 /* CardValidatorViewController.swift in Sources */,
+				4EA20B4621011D62000A9BE2 /* RomanManager.swift in Sources */,
+				4EA20B3221011338000A9BE2 /* RomanConverterViewController.swift in Sources */,
+				4EA20B3A210113C8000A9BE2 /* RomanConverterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +433,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -336,6 +441,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -386,6 +492,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -393,6 +500,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

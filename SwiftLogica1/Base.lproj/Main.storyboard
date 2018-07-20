@@ -1,24 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JI6-bc-xzh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Card-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="CardValidatorViewController" customModule="SwiftLogica1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="CardValidatorView" customModule="SwiftLogica1" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PY6-ti-S6r">
+                                <rect key="frame" x="16" y="100" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="cc-number"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3jn-Id-Vo4"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlr-Uf-auC">
+                                <rect key="frame" x="16" y="169" width="343" height="30"/>
+                                <state key="normal" title="Validate"/>
+                                <connections>
+                                    <action selector="validateNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MCc-bm-Xpl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dvu-8n-amL">
+                                <rect key="frame" x="16" y="249" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dvu-8n-amL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8UL-jF-IjK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dvu-8n-amL" secondAttribute="trailing" constant="16" id="94I-QA-Jnd"/>
+                            <constraint firstItem="Dvu-8n-amL" firstAttribute="top" secondItem="Qlr-Uf-auC" secondAttribute="bottom" constant="50" id="B9J-Hp-05A"/>
+                            <constraint firstItem="PY6-ti-S6r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GGc-RJ-smC"/>
+                            <constraint firstItem="PY6-ti-S6r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="OGp-TY-FY6"/>
+                            <constraint firstItem="Qlr-Uf-auC" firstAttribute="top" secondItem="PY6-ti-S6r" secondAttribute="bottom" constant="39" id="QAF-9D-L9p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qlr-Uf-auC" secondAttribute="trailing" constant="16" id="szl-Lv-WbY"/>
+                            <constraint firstItem="Qlr-Uf-auC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uB1-Jn-124"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PY6-ti-S6r" secondAttribute="trailing" constant="16" id="yYM-YF-nR6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="cardTextField" destination="PY6-ti-S6r" id="lFT-lp-zl9"/>
+                            <outlet property="validateButton" destination="Qlr-Uf-auC" id="MUn-WB-BoL"/>
+                            <outlet property="validateLabel" destination="Dvu-8n-amL" id="Xti-BB-pKj"/>
+                        </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Card" image="icons8-bank-cards-50" selectedImage="icons8-bank-cards-filled-50" id="wgB-14-mJ7"/>
+                    <connections>
+                        <outlet property="cardView" destination="8bC-Xf-vdC" id="KR4-OF-UoQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="857" y="-96"/>
+        </scene>
+        <!--Roman-->
+        <scene sceneID="X3M-7F-TNI">
+            <objects>
+                <viewController id="JDc-HD-u9s" customClass="RomanConverterViewController" customModule="SwiftLogica1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXa-JO-RmQ" customClass="RomanConverterView" customModule="SwiftLogica1" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-EY-ZCt">
+                                <rect key="frame" x="16" y="70" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2y-Lq-qAZ">
+                                <rect key="frame" x="16" y="150" width="343" height="30"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertNumberToRoman:" destination="JDc-HD-u9s" eventType="touchUpInside" id="I4N-8i-smd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRS-c8-nCm">
+                                <rect key="frame" x="16" y="220" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B30-HU-pwr" firstAttribute="trailing" secondItem="o2y-Lq-qAZ" secondAttribute="trailing" constant="16" id="DZl-vf-7ez"/>
+                            <constraint firstItem="B30-HU-pwr" firstAttribute="trailing" secondItem="hAT-EY-ZCt" secondAttribute="trailing" constant="16" id="Sbp-dH-9vv"/>
+                            <constraint firstItem="o2y-Lq-qAZ" firstAttribute="top" secondItem="hAT-EY-ZCt" secondAttribute="bottom" constant="50" id="SuH-00-4pN"/>
+                            <constraint firstItem="hAT-EY-ZCt" firstAttribute="leading" secondItem="B30-HU-pwr" secondAttribute="leading" constant="16" id="Wj8-fs-rOe"/>
+                            <constraint firstItem="hAT-EY-ZCt" firstAttribute="top" secondItem="B30-HU-pwr" secondAttribute="top" constant="50" id="XIV-fb-RaB"/>
+                            <constraint firstItem="B30-HU-pwr" firstAttribute="trailing" secondItem="xRS-c8-nCm" secondAttribute="trailing" constant="16" id="jMP-Vc-Y86"/>
+                            <constraint firstItem="xRS-c8-nCm" firstAttribute="leading" secondItem="B30-HU-pwr" secondAttribute="leading" constant="16" id="oab-q7-AWg"/>
+                            <constraint firstItem="o2y-Lq-qAZ" firstAttribute="leading" secondItem="B30-HU-pwr" secondAttribute="leading" constant="16" id="rTh-kO-PQF"/>
+                            <constraint firstItem="xRS-c8-nCm" firstAttribute="top" secondItem="o2y-Lq-qAZ" secondAttribute="bottom" constant="40" id="z57-IZ-KMj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B30-HU-pwr"/>
+                        <connections>
+                            <outlet property="convertNumber" destination="o2y-Lq-qAZ" id="BIA-77-qew"/>
+                            <outlet property="decimalNumber" destination="hAT-EY-ZCt" id="1ay-DN-eMo"/>
+                            <outlet property="romanNumberLabel" destination="xRS-c8-nCm" id="NMK-Td-hDf"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Roman" image="icons8-roman-soldier-filled-80" selectedImage="icons8-roman-soldier-50" id="k2M-26-1WO"/>
+                    <connections>
+                        <outlet property="romanView" destination="lXa-JO-RmQ" id="fVr-nZ-dsW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kz6-zL-t6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="608.54572713643188"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Bg8-Jc-Efe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JI6-bc-xzh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J7m-iK-b8B">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lZN-6w-sgg"/>
+                        <segue destination="JDc-HD-u9s" kind="relationship" relationship="viewControllers" id="7hz-u8-sfO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TL9-Rz-0KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-bank-cards-50" width="25" height="25"/>
+        <image name="icons8-bank-cards-filled-50" width="25" height="25"/>
+        <image name="icons8-roman-soldier-50" width="25" height="25"/>
+        <image name="icons8-roman-soldier-filled-80" width="25" height="25"/>
+    </resources>
 </document>
