@@ -16,9 +16,6 @@ class RomanConvert: NSObject {
         var romanThousands = RomanConvert.getUntilNineHundred(number: thousands)
         let romanUnit = RomanConvert.getUntilNineHundred(number: unit)
         romanThousands = changeCharacterThousand(romanThousands)
-        //
-        //        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "Your Text")
-        //        attributeString.addAttribute(NSAttributedStringKey.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
         return romanThousands + romanUnit
     }
     
@@ -74,45 +71,38 @@ class RomanConvert: NSObject {
         return romanNumber + getUntilNinety(number:auxNumber)
     }
     
-    private static func getUntilNinety(number:NSInteger) -> String {
-        var romanNumber = ""
-        var auxNumber = 0
-        auxNumber  = number / 90
+    private static func getUntilNinety(number:Int) -> String {
+        var romanNumber = emptyString
+        var auxNumber = number
+        auxNumber  = number
         
-        if(auxNumber == 1){
-            romanNumber = "XC"
-            auxNumber = number % 90
+        if(auxNumber >= 90){
+            romanNumber = RomanNumbers.ninety
+            auxNumber = number - 90
             return romanNumber + getUntilNine(number: auxNumber)
-        }
-        
-        if(number <= 50) {
+        } else if(number <= 50) {
             return romanNumber + getUntilFifty(number:number)
+        } else {
+            auxNumber = (number - 50) / 10
+            romanNumber = RomanNumbers.fifty
+            for _ in 0..<auxNumber{
+                romanNumber = romanNumber + RomanNumbers.ten
+            }
+            auxNumber = number % 10
         }
-        
-        auxNumber = (number - 50) / 10
-        
-        romanNumber = "L"
-        for _ in 1...auxNumber{
-            romanNumber = romanNumber + "X"
-        }
-        auxNumber = (number - 50) % 10
         return romanNumber + getUntilNine(number:auxNumber)
     }
     
     private static func getUntilFifty(number: Int) -> String {
-        var romanNumber = ""
-        var auxNumber = number / 50
-        
-        if (auxNumber == 1){
-            romanNumber = "L"
-            auxNumber = number % 50
+        var romanNumber = emptyString
+        var auxNumber = number
+        if (number == 50){
+            romanNumber = RomanNumbers.fifty
+            auxNumber = number - 50
             return romanNumber + getUntilNine(number:auxNumber)
-        }
-        auxNumber = number / 40
-        
-        if (auxNumber == 1){
-            romanNumber = "XL"
-            auxNumber = number % 40
+        } else if (number >= 40){
+            romanNumber = RomanNumbers.fourty
+            auxNumber = number - 40
             return romanNumber + getUntilNine(number:auxNumber)
         }
         return getUntilThirty(number:number)
@@ -120,11 +110,11 @@ class RomanConvert: NSObject {
     
     
     private static func getUntilThirty(number: Int) -> String {
-        var romanNumbers = ""
+        var romanNumbers = emptyString
         var auxNumber = number / 10
         if(auxNumber != 0){
-            for _ in 1...auxNumber {
-                romanNumbers = "X" + romanNumbers
+            for _ in 0..<auxNumber {
+                romanNumbers = RomanNumbers.ten + romanNumbers
             }
         }
         auxNumber = number % 10
@@ -137,11 +127,10 @@ class RomanConvert: NSObject {
 
         if number == 9{
             return RomanNumbers.nine
-        } else if number > 5 {
+        } else if number >= 5 {
             romanNumbers = RomanNumbers.five
             auxNumber = number - 5
         }
-    
         return romanNumbers + getFirsNumbers(number:auxNumber)
     }
     
@@ -154,10 +143,10 @@ class RomanConvert: NSObject {
             return RomanNumbers.four
         }
         
-        for _ in 1...number {
+        for _ in 0..<number {
             romanNumber = romanNumber + RomanNumbers.one
         }
-
+        
         return romanNumber
     }
 }

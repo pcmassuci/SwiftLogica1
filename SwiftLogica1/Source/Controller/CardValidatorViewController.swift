@@ -32,10 +32,6 @@ class CardValidatorViewController: UIViewController, UITextViewDelegate {
             cardView.validateLabel.text = invalid
         }
     }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        cardView.validateLabel.text = emptyString
-    }
 }
 
 
