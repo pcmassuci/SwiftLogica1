@@ -8,7 +8,7 @@
 
 import UIKit
 
-let kMaxValueOfNumber = 3888
+let kMaxValueOfNumber = 3999
 
 class RomanConverterViewController: UIViewController {
     @IBOutlet var romanView: RomanConverterView!
@@ -23,13 +23,10 @@ class RomanConverterViewController: UIViewController {
     }
     
     @IBAction func convertNumberToRoman(_ sender: Any) {
-        let decimalText = romanView.decimalNumber.text!
-        if decimalText != DefaultStrings.emptyString {
-            let numberText = decimalText
-            let romanNumber = RomanManager.convertRomanNumberManger(number: numberText)
-            romanView.romanNumberLabel.text = romanNumber
+        if let number = Int(romanView.decimalNumber.text!) {
+           romanView.romanNumberLabel.text = RomanManager.convertDecimalToRoman(number)
         } else {
-            showAlert(message: "")
+              showAlert(message: "Esse formato de numero nao pode ser convertido")
         }
     }
     
@@ -41,7 +38,6 @@ class RomanConverterViewController: UIViewController {
 }
 
 extension RomanConverterViewController: UITextFieldDelegate {
- 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == romanView.decimalNumber {
             return decimalTextFieldValidations(textField.text! + string)
@@ -49,10 +45,11 @@ extension RomanConverterViewController: UITextFieldDelegate {
         return true
     }
     
-    private func decimalTextFieldValidations(_ text: String) ->Bool {
+    private func decimalTextFieldValidations(_ text: String) -> Bool {
         if let intValue = Int(text) {
               return intValue <= kMaxValueOfNumber
         }
+        showAlert(message: InteractionStrings.sendValidNumber)
      return false
     }
     

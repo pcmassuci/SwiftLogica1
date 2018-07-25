@@ -30,8 +30,9 @@ struct DefaultStrings {
 }
 
 struct InteractionStrings {
-    static let emptyField = "Campo vazio";
+    static let emptyField = "Campo vazio"
     static let sendValidNumber = "Por favor digite um numero valido!"
+    static let valid = "valido"
+    static let invalid = "invalido"
 }
-
 

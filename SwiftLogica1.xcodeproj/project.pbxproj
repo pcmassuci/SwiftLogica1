@@ -32,6 +32,7 @@
 		4EA20B4821011D86000A9BE2 /* CardValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */; };
 		4EA20B4921011D86000A9BE2 /* CardValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */; };
 		4EA20B4A21011D86000A9BE2 /* CardValidateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */; };
+		4EAC704A2108EAF200C13536 /* RomanConvertV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC70492108EAF200C13536 /* RomanConvertV2.swift */; };
 		4EAEAA8D2107B5CA00B5307F /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEAA8C2107B5CA00B5307F /* Verify.swift */; };
 		4EAEAA8F2107B83300B5307F /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAEAA8E2107B83300B5307F /* Validations.swift */; };
 		67557DFA2101FE5D00583BA7 /* GlobalStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67557DF92101FE5D00583BA7 /* GlobalStrings.swift */; };
@@ -77,6 +78,7 @@
 		4EA20B3F210115A2000A9BE2 /* RomanConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanConvert.swift; sourceTree = "<group>"; };
 		4EA20B4321011D62000A9BE2 /* RomanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanManager.swift; sourceTree = "<group>"; };
 		4EA20B4721011D86000A9BE2 /* CardValidateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidateManager.swift; sourceTree = "<group>"; };
+		4EAC70492108EAF200C13536 /* RomanConvertV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanConvertV2.swift; sourceTree = "<group>"; };
 		4EAEAA8C2107B5CA00B5307F /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		4EAEAA8E2107B83300B5307F /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		53D88724C1256B3D3BEC2679 /* Pods_SwiftLogica1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLogica1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 				4EA20B3B21011406000A9BE2 /* LuhnAlgorithm.swift */,
 				4EA20B3F210115A2000A9BE2 /* RomanConvert.swift */,
 				4EAEAA8C2107B5CA00B5307F /* Verify.swift */,
+				4EAC70492108EAF200C13536 /* RomanConvertV2.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAC704A2108EAF200C13536 /* RomanConvertV2.swift in Sources */,
 				4EAEAA8D2107B5CA00B5307F /* Verify.swift in Sources */,
 				4EA20B40210115A2000A9BE2 /* RomanConvert.swift in Sources */,
 				67C74C552101042400AF494E /* AppDelegate.swift in Sources */,

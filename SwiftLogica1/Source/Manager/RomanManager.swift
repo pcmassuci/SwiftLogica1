@@ -14,8 +14,12 @@ class RomanManager: NSObject {
     ///
     /// - Parameter number: Numero digitado no campo
     /// - Returns: Numero romano convertido
-    static func convertRomanNumberManger(number:String)->String {
+    static func convertRomanNumberManger(number:String) -> String {
     return RomanConvert.getRomans(number: number)
+    }
+    
+    static func convertDecimalToRoman(_ number:Int) -> String {
+        return RomanConvertV2.convertToRomanNumbersFromDecimalNumber(number)
     }
 
 }
