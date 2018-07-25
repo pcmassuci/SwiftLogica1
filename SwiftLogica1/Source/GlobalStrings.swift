@@ -21,7 +21,17 @@ struct RomanNumbers {
     static let fourHundred = "CD"
     static let fiveHundred = "D"
     static let nineHundred = "CM"
-    static let thousandRoman = "M"
+    static let thousand = "M"
 }
 
-let emptyString = ""
+struct DefaultStrings {
+    static let emptyString = ""
+     static let ok = "OK"
+}
+
+struct InteractionStrings {
+    static let emptyField = "Campo vazio";
+    static let sendValidNumber = "Por favor digite um numero valido!"
+}
+
+

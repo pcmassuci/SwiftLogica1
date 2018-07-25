@@ -22,7 +22,7 @@ class CardValidatorViewController: UIViewController, UITextViewDelegate {
         cardView.validateLabel.text = ""
     }
     
-    @IBAction func validateNumber(_ sender: Any) {
+    @IBAction func validateNumber(_ sender:Any) {
         let manager = CardValidateManager()
         let isACardNumber =
             manager.validateCardNumberManger(card:cardView.cardTextField.text!)

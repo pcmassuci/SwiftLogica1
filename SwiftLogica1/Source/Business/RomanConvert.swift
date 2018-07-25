@@ -9,6 +9,11 @@
 import UIKit
 
 class RomanConvert: NSObject {
+    
+    /// Convete uma String com numeros decimais em romanos.
+    ///
+    /// - Parameter number:String numero decimal.
+    /// - Returns: String numero romano.
     static func getRomans(number:String) -> String{
         let intNumber = Int(number)!
         let thousands = intNumber / 1000
@@ -21,7 +26,7 @@ class RomanConvert: NSObject {
     
     
     private static func changeCharacterThousand (_ romanNumber: String) -> String {
-        if romanNumber == "" {
+        if romanNumber == DefaultStrings.emptyString {
             return romanNumber
         }
         var array = separeDigit(romanNumber)
@@ -32,9 +37,9 @@ class RomanConvert: NSObject {
     private static func convertThousands(_ romamArray: [String])-> [String]{
         var array = romamArray
         let roman = array.popLast()
-        if roman == "I" {
+        if roman == RomanNumbers.one {
             array = convertThousands(array)
-            array.append("M")
+            array.append(RomanNumbers.thousand)
         }
         return array
     }
@@ -48,23 +53,23 @@ class RomanConvert: NSObject {
     }
     
     private static func getUntilNineHundred(number:Int) -> String{
-        var romanNumber = ""
+        var romanNumber = DefaultStrings.emptyString
         var auxNumber = number / 100
         if auxNumber == 9 {
-            romanNumber = "CM"
+            romanNumber = RomanNumbers.nineHundred
             auxNumber = number % 100
             return romanNumber + getUntilNinety(number:auxNumber)
         }
         if auxNumber >= 5 {
-            romanNumber = "D"
+            romanNumber = RomanNumbers.fiveHundred
             auxNumber -= 5
         }
         if auxNumber == 4 {
-            romanNumber = "CD"
+            romanNumber = RomanNumbers.fourHundred
         }
         if auxNumber > 0 {
             for _ in 1...auxNumber {
-                romanNumber += "C"
+                romanNumber += RomanNumbers.hundred
             }
         }
         auxNumber = number % 100
@@ -72,7 +77,7 @@ class RomanConvert: NSObject {
     }
     
     private static func getUntilNinety(number:Int) -> String {
-        var romanNumber = emptyString
+        var romanNumber = DefaultStrings.emptyString
         var auxNumber = number
         auxNumber  = number
         
@@ -94,7 +99,7 @@ class RomanConvert: NSObject {
     }
     
     private static func getUntilFifty(number: Int) -> String {
-        var romanNumber = emptyString
+        var romanNumber = DefaultStrings.emptyString
         var auxNumber = number
         if (number == 50){
             romanNumber = RomanNumbers.fifty
@@ -110,7 +115,7 @@ class RomanConvert: NSObject {
     
     
     private static func getUntilThirty(number: Int) -> String {
-        var romanNumbers = emptyString
+        var romanNumbers = DefaultStrings.emptyString
         var auxNumber = number / 10
         if(auxNumber != 0){
             for _ in 0..<auxNumber {
@@ -122,7 +127,7 @@ class RomanConvert: NSObject {
     }
     
     private static func getUntilNine(number: Int) -> String {
-        var romanNumbers = emptyString
+        var romanNumbers = DefaultStrings.emptyString
         var auxNumber = number
 
         if number == 9{
@@ -135,14 +140,13 @@ class RomanConvert: NSObject {
     }
     
     private static func getFirsNumbers(number:Int) -> String{
-        var romanNumber = emptyString
+        var romanNumber = DefaultStrings.emptyString
         
         if number == 0 {
-            return emptyString
+            return DefaultStrings.emptyString
         }else if number == 4 {
             return RomanNumbers.four
         }
-        
         for _ in 0..<number {
             romanNumber = romanNumber + RomanNumbers.one
         }
