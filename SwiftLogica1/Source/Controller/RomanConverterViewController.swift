@@ -20,14 +20,15 @@ class RomanConverterViewController: UIViewController {
     
     func setupViewDidLoad() {
         romanView.decimalNumber.delegate = self
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func convertNumberToRoman(_ sender: Any) {
         if let number = Int(romanView.decimalNumber.text!) {
            romanView.romanNumberLabel.text = RomanManager.convertDecimalToRoman(number)
-        } else {
-              showAlert(message: "Esse formato de numero nao pode ser convertido")
+            return;
         }
+              showAlert(message: InteractionStrings.invalidFormat)
     }
     
     private func showAlert(message:String) {
@@ -52,5 +53,4 @@ extension RomanConverterViewController: UITextFieldDelegate {
         showAlert(message: InteractionStrings.sendValidNumber)
      return false
     }
-    
 }

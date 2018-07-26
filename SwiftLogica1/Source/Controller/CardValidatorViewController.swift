@@ -10,24 +10,29 @@ import UIKit
 class CardValidatorViewController: UIViewController{
     @IBOutlet var cardView: CardValidatorView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setviewWillAppear(animated)
+    override func viewDidLoad() {
+        setviewDidLoad()
     }
     
-    private func setviewWillAppear(_ animated: Bool) {
-        cardView.validateLabel.text = ""
+    private func setviewDidLoad() {
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func validateNumber(_ sender:Any) {
         let manager = CardValidateManager()
-        let isACardNumber =
-            manager.validateCardNumberManger(card:cardView.cardTextField.text!)
+        let isACardNumber = manager.validateCardNumberManger(card:cardView.cardTextField.text!)
         if isACardNumber {
             cardView.validateLabel.text = InteractionStrings.valid
-        } else {
-            cardView.validateLabel.text = InteractionStrings.invalid
+            return;
         }
+        cardView.validateLabel.text = InteractionStrings.invalid
+    }
+    
+    private func validateField(_ string:String) -> Bool {
+        if let _ = Int(string) {
+            return true
+        }
+        return false
     }
 }
 
@@ -35,15 +40,6 @@ extension CardValidatorViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return validateField(textField.text! + string)
     }
-    
-    private func validateField(_ string:String) -> Bool {
-        if let _ = Int(string) {
-            return true
-        }
-        
-        return false
-    }
-    
 }
 
 
